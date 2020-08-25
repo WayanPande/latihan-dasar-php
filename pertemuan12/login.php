@@ -35,6 +35,7 @@ if (isset($_POST["login"])) {
 </head>
 <body>
     <h1>Halaman Login</h1>
+    <p>Selamat datang!</p>
 
     <?php if (isset($error)) :?>
 
