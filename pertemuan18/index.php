@@ -32,6 +32,14 @@ if (isset($_POST["cari"])) {
             z-index: -1;
             display: none;
         }
+
+        /* menghilangkan sesuatu saat akan di print dengan css */
+        @media print {
+            .logout, .tambah, .form-cari {
+                display: none;
+            }
+            
+        }
     </style>
     <script src="js/jquery-3.5.1.min.js"></script>    
     <script src="js/script.js"></script>    
@@ -39,14 +47,14 @@ if (isset($_POST["cari"])) {
 </head>
 <body>
 
-    <a href="logout.php">Logout</a>
+    <a href="logout.php" class="logout">Logout</a>
 
     <h1>Daftar Mahasiswa</h1>
 
-    <a href="tambah.php">Tambah Data Mahasiswa</a>
+    <a href="tambah.php" class="tambah">Tambah Data Mahasiswa</a>
     <br><br>
 
-    <form action="" method="post">
+    <form action="" method="post" class="form-cari">
 
         <input type="text" name="keyword" size="40" autofocus 
         placeholder="Masukan keyword pencarian" autocomplete="off" id="keyword">
